@@ -1,9 +1,9 @@
 require( 'sinatra' )
-require( 'sinatra/contrib/all' )
+require('sinatra/contrib/all') if development?
 require_relative( '../models/book.rb' )
 require_relative( '../models/genre.rb' )
 
-also_reload( '../models/*' )
+
 
 # To retrieve all 'books'
 

@@ -1,10 +1,9 @@
 require( 'sinatra' )
-require( 'sinatra/contrib/all' )
-require('pry')
+require('sinatra/contrib/all') if development?
 require_relative( '../models/author.rb' )
 require_relative( '../models/book.rb' )
 
-also_reload( '../models/*' )
+
 
 # To retrieve all 'authors'
 

@@ -13,10 +13,6 @@ INCOMPLETE TASKS:
 
 NOT DONE - Create a filter dependant on product attributes (eg cars: hatchback/SUV/estate)
 
-
-
-
-
 --
 # RENTAL SHOP
 

@@ -4,7 +4,6 @@ require_relative( "../models/book.rb" )
 require_relative( "../models/member.rb" )
 require_relative( "../models/loan.rb" )
 
-require("pry")
 
 
 # book.delete_all()
@@ -184,5 +183,4 @@ loan4 = Loan.new({
 
 loan4.save()
 
-binding.pry
 nil

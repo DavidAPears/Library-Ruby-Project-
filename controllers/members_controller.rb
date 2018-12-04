@@ -1,10 +1,9 @@
 require( 'sinatra' )
-require( 'sinatra/contrib/all' )
-require( 'pry' )
+require('sinatra/contrib/all') if development?
 require_relative( '../models/member.rb' )
 require_relative( '../models/loan.rb' )
 
-also_reload( '../models/*' )
+
 
 # To add new members (i.e new member icon link):
 
