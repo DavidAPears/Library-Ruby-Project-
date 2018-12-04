@@ -1,0 +1,58 @@
+<h1>Loans</h1>
+
+<h2>
+  <a href="./">
+    <img src="/images/logo.png" alt="Home Page" style="width:250px;height:150px;border:0;position:fixed; top:0; right:0;">
+  </a>
+</h2>
+
+<h2>
+  <a href="/loans/new">
+    <img src="/images/bookout.png" alt="Loan Book Out!" style="width:200px;height:200px;border:0">
+  </a>
+
+  <!-- <a href="/loans/edit">
+    <img src="/images/bookin.png" alt="Log returned Book!" style="width:200px;height:200px;border:0">
+  </a> -->
+</h2>
+
+<table>
+  <tr>
+    <th>Surname</th>
+    <th></th>
+    <th>Book</th>
+    <th></th>
+    <th>Loan Start Date</th>
+    <th></th>
+    <th>Length Of Loan (days) </th>
+    <th></th>
+    <th>Has Book Been Returned? </th>
+    <th></th>
+    <th>Edit Existing loan </th>
+    <th></th>
+    <th>Book Returned </th>
+  </tr>
+
+  <% for loan in @loans %>
+
+  <tr>
+    <td><p><%= loan.member.last_name %></p></td>
+    <td>|</td>
+    <td><p><%= loan.book.title %></p></td>
+    <td>|</td>
+    <td><p><%= loan.loan_start_date %></p></td>
+    <td>|</td>
+    <td><%= loan.loan_length %></td>
+    <td>|</td>
+    <td><p><%= loan.returned?%></p></td>
+    <td>|</td>
+    <td><a href="/loans/<%= loan.id %>/edit">
+      <img src="/images/editicon.jpeg" alt="Edit" style="width:42px;height:42px;border:0" class="icon">
+    </a></td>
+    <td>|</td>
+    <td><a href="/loans/<%= loan.id %>/returned">
+      <img src="/images/bookin.png" alt="Returned" style="width:42px;height:42px;border:0" class="icon">
+    </a></td>
+  </tr>
+  <% end %>
+  </table>

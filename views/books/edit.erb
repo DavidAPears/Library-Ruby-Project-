@@ -1,0 +1,29 @@
+<form method="post" action="/books">
+
+  <label for="title-field">Title:</label>
+  <input
+  type="text"
+  name="title"
+  id="title-field"
+  value = "<%= @book.title %>"
+  />
+
+  <label for="author_id-field">Author:</label>
+  <input
+  type="text"
+  name="author"
+  id="author-field"
+  value = "<%= @book.author_id %>"
+  />
+
+  <label for="genre-field">Genre:</label>
+  <input
+  type="text"
+  name="genre"
+  id="genre-field"
+  value = "<%= @book.genre_id %>"
+  />
+
+  <input type="submit" value="Submit changes to BOOK !">
+
+</form>

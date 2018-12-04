@@ -1,0 +1,61 @@
+<h1>Members</h1>
+<form>
+<div>
+  <input type="search" id="mySearch" name="q"
+   placeholder="Enter Surname Here">
+  <button>Search</button>
+</div>
+</form>
+<br>
+<h2>
+  <a href="./">
+    <img src="/images/logo.png" alt="Home Page" style="width:250px;height:150px;border:0;position:fixed; top:0; right:0;">
+  </a>
+</h2>
+
+<h1>
+  <a href="/members/new">
+    <img src="/images/adduser.png" alt="Add new member" style="width:100px;height:100px;border:0">
+  </a>
+</h1>
+
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th></th>
+    <th>Last Name</th>
+    <th></th>
+    <th>Post Code</th>
+    <th></th>
+    <th>E-mail</th>
+    <th></th>
+    <th>Active Membership</th>
+    <th></th>
+    <th>Edit Member</th>
+    <th></th>
+    <th>Deactivate Membership</th>
+  </tr>
+  <% for member in @members %>
+  <tr>
+    <td><a href="/members/<%= member.id %>"><%= member.first_name %></a></td>
+
+    <td><a href="/members/<%= member.id %>"><%= member.last_name %></a></td>
+    <td>|</td>
+    <td><%= member.post_code %></td>
+    <td>|</td>
+    <td><%= member.email_address %></td>
+    <td>|</td>
+    <td><p><%= member.active? %></P>
+    </a></td>
+    <td>|</td>
+    <td><a href="/members/<%= member.id %>/edit">
+      <img src="/images/editicon.jpeg" alt="Edit" style="width:42px;height:42px;border:0" class="icon">
+    </a></td>
+    <td>|</td>
+    <td><a href="/members/<%= member.id %>/deactivate">
+      <img src="/images/deactivatemember.ico" alt="Deactivate" style="width:42px;height:42px;border:0" class="icon">
+    </a></td>
+  </tr>
+  <% end %>
+</table>

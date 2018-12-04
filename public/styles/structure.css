@@ -1,0 +1,77 @@
+body {
+  background: black url('/images/bookbackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat center center fixed;
+  background-attachment: fixed
+  color: black;
+  font-family: 'Raleway', serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.logo {
+  background: white url('/images/logo.png');
+  position: relative;
+  color: #fff;
+  width: 150px;
+  float:left;
+  margin-top:16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', cursive;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+h1 {
+  font-size: 2.0em;
+  color: #50f442;
+  margin-bottom: 20px;
+
+}
+
+a, a:link, a:visited {
+  color: #50f442;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #F7FF00;
+}
+
+nav {
+  padding: 0px;
+  margin: 0px;
+  padding-right: 25px;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+main {
+  padding: 25px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+content {
+  border-left: 1px solid ;
+  padding-left: 25px;
+}

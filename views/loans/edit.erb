@@ -1,0 +1,40 @@
+<form method="post" action="/loans/<%= @loan.id %>">
+
+  <label for="member-id-field">Member Surname:</label>
+  <input
+  type="text"
+  name="member_id"
+  id="member-id-field"
+  value = "<%= @loan.member.last_name %>"
+  />
+
+  <label for="book-id-field">Title:</label>
+  <input
+  type="text"
+  name="book_id"
+  id="book-id-field"
+  value = "<%= @loan.book.title %>"
+  />
+
+  <label for="loan-start-date-field">Loan Start Date:</label>
+  <input
+  type="date"
+  name="loan_start_date"
+  id="loan-start-date-field"
+  value = "<%= @loan.loan_start_date %>"
+  />
+
+
+  <label for="loan-length-field">Loan Length:</label>
+  <input
+  type="number"
+  name="loan_length"
+  min="1"
+  max="21"
+  id="loan-length-field"
+  value = "<%= @loan.loan_length %>"
+  />
+
+
+  <input type="submit" value="Edit existing Loan!">
+</form>
