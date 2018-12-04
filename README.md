@@ -1,7 +1,5 @@
 # Library-Ruby-Project-
 
-To start: CD into the directory containing the project and then: 
+Visit:-
 
-$  ruby app.rb
-
-Then open 'http://localhost:4567' in your browser
+http://rubylibrary.herokuapp.com
